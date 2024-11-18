@@ -12,12 +12,14 @@ def take_recipe():
         "cooking_time": cooking_time,
         "ingredients": ingredients
     }
+    
+    return recipe
 
 n = int(input("How many recipes will you like to enter?"))
 
 # Iterates through number of given recipes
 for i in range(n):
-    recipe = recipes_list
+    recipe = take_recipe()
 
 # Checks whether an ingredient should be added to an ingredient list
     for ingredient in recipe["ingredients"]:
