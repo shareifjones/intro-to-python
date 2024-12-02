@@ -189,7 +189,7 @@ def edit_recipe():
     print (recipe_to_edit)
 
 # Allows user to choose what they would like to edit
-    attribute = input("Please enter the number of the attribute you'd like to edit! Name: 1, Ingredients: 2, Cooking Time: 3: \n")
+    attribute = input("Please enter the number of the attribute you'd like to edit!\n Name: 1, Ingredients: 2, Cooking Time: 3: \n")
 
 # Runs the function in correlation to what the user chooses
     if attribute == '1':
