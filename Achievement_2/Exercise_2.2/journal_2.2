@@ -1,0 +1,27 @@
+Exercise 2.2: Django Project Set Up
+
+Learning Goals
+
+●	Describe the basic structure of a Django project 
+●	Summarize the difference between projects and apps
+●	Create a Django project and run it locally
+●	Create a superuser for a Django web application
+
+Reflection Questions
+
+1.	Suppose you’re in an interview. The interviewer gives you their company’s website as an example, asking you to convert the website and its different parts into Django terms. How would you proceed? For this question, you can think about your dream company and look at their website for reference. 
+(Hint: In the Exercise, you saw the example of the CareerFoundry website in the Project and Apps section.)
+Spotify:
+I would first identify the main components of the company’s website and then map them to Django’s architecture (models, views, templates, and URLs). 
+Things like users, songs, playlists, and artists can be considered models that have their own data.  
+The views could be the homepage, user account view, and playlist management view.  
+For templates, I see ones for a song where the details and playback options are shown and the playlist template which displays all songs in a playlist.  
+For URLs, ‘/user/<username> brings you to the user profile, while “/playlist/<playlist ID>” brings you to said playlist.
+
+2.	In your own words, describe the steps you would take to deploy a basic Django application locally on your system. 
+First, I would set up the environment by installing Python and setting up a virtual environment.  
+I would then install Django and create a Django project.  Next, I would run the initial migrations to create the database and then start the development server to test the app locally. 
+
+3.	Do some research about the Django admin site and write down how you’d use it during your web application development.
+I would use the Django admin site to perform basic database operations such as deleting, adding, and modifying records.  
+Also, to test app features and customize the admin interface by adding things like search & filters and customized display fields.
