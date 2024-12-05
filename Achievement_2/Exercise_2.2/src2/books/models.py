@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.shortcuts import reverse
 # Create your models here.
 
 genre_choices= (
@@ -19,6 +19,7 @@ book_type_choices=(
 
 class Book(models.Model):
     name = models.CharField(max_length=120)
+    author_name = models.CharField(max_length=120, default='Unknown author')
     price= models.FloatField (help_text= 'in US dollars $')
     genre = models.CharField(max_length=12, choices=genre_choices, default='classic')
     book_type = models.CharField(max_length=12, choices=book_type_choices, default='hardcover') 
@@ -26,3 +27,6 @@ class Book(models.Model):
 
     def __str__(self):
        return str(self.name)
+    
+    def get_absolute_url(self):
+       return reverse ('books:detail', kwargs={'pk': self.pk})
