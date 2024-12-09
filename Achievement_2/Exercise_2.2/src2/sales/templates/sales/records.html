@@ -12,6 +12,23 @@
     <h1> Search for sales records </h1>
 
     <hr>
+    <form action="" method="POST">
+
+        <!-- djangos security feature -->
+        {% csrf_token %}
+        <!-- form that was import from the context dictionary in the view -->
+        {{form}}
+        <button type="submit">search</button>
+
+    </form>
+    <br>
+    {% if sales_df %}
+    {{sales_df|safe}}
+    <br>
+    <img src="data:image/png;base64, {{chart|safe}}">
+    {% else %}
+    <h3> no data</h3>
+    {% endif %}
 </body>
 
 </html>
