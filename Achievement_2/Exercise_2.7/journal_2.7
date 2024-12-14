@@ -1,0 +1,51 @@
+Exercise 2.7: Data Analysis and Visualization in Django
+
+Learning Goals
+
+●	Work on elements of two-way communication like creating forms and buttons
+●	Implement search and visualization (reports/charts) features
+●	Use QuerySet API, DataFrames (with pandas), and plotting libraries (with matplotlib)
+
+Reflection Questions
+
+1.	Consider your favorite website/application (you can also take CareerFoundry). Think about the various data that your favorite website/application collects. Write down how analyzing the collected data could help the website/application. 
+Considering CareerFoundry, data analysis could be used to:
+•	Personalize course recommendations based on user preferences and career goals.
+•	Track student progress to provide timely reminders or assistance.
+•	Analyze feedback from surveys to improve course content and mentorship programs.
+•	Identify trends in the tech industry to create new, relevant courses.
+
+2.	Read the Django official documentation on QuerySet API. Note down the different ways in which you can evaluate a QuerySet.
+a. Iteration
+•	When you iterate over a QuerySet, the database is queried, and the rows are fetched.
+b. Slicing
+•	Slicing a QuerySet triggers evaluation but only retrieves the requested rows.
+c. Pickling
+•	When you serialize (pickle) a QuerySet, it is evaluated.
+d. Conversion to a List
+•	Converting a QuerySet to a list causes it to be evaluated.
+e. Boolean Checks
+•	When used in a boolean context, such as if or bool(), the QuerySet is evaluated to determine if it contains any results.
+f. String Conversion
+•	If you try to print or convert a QuerySet to a string, it will be evaluated.
+g. Aggregate Functions
+•	Using aggregation functions like .count(), .exists(), .first(), .last(), .aggregate() causes immediate evaluation.
+h. Caching
+•	If a QuerySet is evaluated once, its result is cached. Subsequent access to the QuerySet does not trigger another database query unless re-evaluated.
+
+
+3.	In the Exercise, you converted your QuerySet to DataFrame. Now do some research on the advantages and disadvantages of QuerySet and DataFrame, and explain the ways in which DataFrame is better for data processing.
+
+
+Django QuerySet
+A QuerySet is Django's way of querying the database. 
+It represents a collection of objects retrieved from the database and provides an API to filter, order, and aggregate data.
+Pandas DataFrame
+A DataFrame is a two-dimensional and size-mutable data structure in Python, part of the Pandas library. 
+It provides powerful tools for data manipulation, analysis, and visualization.
+QuerySets are tightly integrated with Django’s ORM, making it easy to query data directly from the database. 
+DataFrames provide a wide range of data manipulation tools such as reshaping, grouping, and filtering making them better for data analysis. 
+QuerySets lack the advanced analytical and statistical capabilities that DataFrames provide. 
+DataFrames require explicit conversion from QuerySets or database queries. They do not have a direct connection to the database. 
+DataFrames provide tools for statistical and numerical computations, making them ideal for data analytics and machine learning tasks. 
+DataFrames offer powerful tools for reshaping, filtering, and pivoting data, which are not available in QuerySets.
